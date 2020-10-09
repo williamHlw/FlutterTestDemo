@@ -1,10 +1,12 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test_demo/class/NavigationTest.dart';
 import 'package:flutter_test_demo/class/WidgetIntroduce.dart';
+import 'package:flutter_test_demo/class/LayoutTest.dart';
 void main() {
   runApp(MyApp(
-    items: ["导航测试","Widgets介绍"],
+    items: ["导航测试","Widgets介绍","布局"],
   ));
 }
 
@@ -51,7 +53,12 @@ void jumpMethod(int index , BuildContext context){
     Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
       return new WidgetIntroduce();
     }));
-  }else{
+  }else if(index == 2){
+    Navigator.push(context, new CupertinoPageRoute(builder: (BuildContext context){
+      return new LayoutTest();
+    }));
+  }
+  else{
 
   }
 }
