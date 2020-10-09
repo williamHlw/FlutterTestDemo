@@ -1,9 +1,10 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test_demo/class/NavigationTest.dart';
+import 'package:flutter_test_demo/class/WidgetIntroduce.dart';
 void main() {
   runApp(MyApp(
-    items: ["测试1","测试2"],
+    items: ["导航测试","Widgets介绍"],
   ));
 }
 
@@ -41,11 +42,15 @@ class MyApp extends StatelessWidget {
 void jumpMethod(int index , BuildContext context){
   print(index);
   if(index == 0){
+    // 导航测试
     Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context) {
-            return new NavigationTest(); //不传值的跳转
+      return new NavigationTest();
     }));
   }else if(index == 1){
-
+    //widget介绍
+    Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+      return new WidgetIntroduce();
+    }));
   }else{
 
   }
