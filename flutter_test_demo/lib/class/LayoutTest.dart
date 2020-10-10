@@ -27,7 +27,7 @@ class mainBackView extends StatelessWidget{
     Widget buttonRow = buttonView();
     return Column(
       children: <Widget>[
-        Image.asset('/images/lake.jpg',
+        Image.asset('images/lake.jpg',
           width: 600,
           height: 240,
           fit: BoxFit.cover,),
