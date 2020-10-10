@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test_demo/class/NavigationTest.dart';
 import 'package:flutter_test_demo/class/WidgetIntroduce.dart';
 import 'package:flutter_test_demo/class/LayoutTest.dart';
+import 'package:flutter_test_demo/class/LayoutConstraintTest.dart';
 void main() {
   runApp(MyApp(
-    items: ["导航测试","Widgets介绍","布局"],
+    items: ["导航测试","Widgets介绍","布局","布局约束"],
   ));
 }
 
@@ -56,6 +57,10 @@ void jumpMethod(int index , BuildContext context){
   }else if(index == 2){
     Navigator.push(context, new CupertinoPageRoute(builder: (BuildContext context){
       return new LayoutTest();
+    }));
+  }else if(index == 3){
+    Navigator.push(context, new MaterialPageRoute(builder: (BuildContext context){
+      return new LayoutConstraintTest();
     }));
   }
   else{
